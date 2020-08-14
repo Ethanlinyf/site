@@ -17,6 +17,7 @@ A [[./org-to-site-tutor.org][pure site]] based on org mode.
 | [[./tmux.org][Tmux]]                |
 | [[./manjaro-linux.org][Manjaro Linux]]       |
 | [[./source-code-compile.org][Source Code Compile]] |
+| [[./marxism.org][Marxism]]             |
 
 | GTD             |
 |-----------------|
@@ -35,11 +36,11 @@ A [[./org-to-site-tutor.org][pure site]] based on org mode.
 <div class="me">
   <span><b>Contact me via :)</b><span>
   <div class="contact">
-    <a href="//weibo.com/u/6867589681" target="_blank"><i class="fab fa-weibo animated heartBeat delay-2s slower"></i></a>
+    <a id="weibo" href="//weibo.com/u/6867589681" target="_blank"><i class="fab fa-weibo animated heartBeat delay-2s slower"></i></a>
     <i class="wechat fab fa-weixin animated heartBeat delay-2s slower"></i>
-    <a href="mailto:loveminimal@outlook.com" target="_blank"><i class="fab fa-mailchimp animated heartBeat delay-2s slower"></i></a>
-    <a href="//github.com/loveminimal" target="_blank"><i class="fab fa-github animated heartBeat delay-2s slower"></i></a>
-    <a href="//space.bilibili.com/11608450" target="_blank"><i class="fas fa-play-circle animated heartBeat delay-2s slower"></i></a>
+    <a id="email" href="mailto:loveminimal@outlook.com" target="_blank"><i class="fab fa-mailchimp animated heartBeat delay-2s slower"></i></a>
+    <a id="github" href="//github.com/loveminimal" target="_blank"><i class="fab fa-github animated heartBeat delay-2s slower"></i></a>
+    <a id="bilibili" href="//space.bilibili.com/11608450" target="_blank"><i class="fas fa-play-circle animated heartBeat delay-2s slower"></i></a>
   </div>
   <div id="wechat">
     <img src="/images/bg/wechat.jpg" width="20%" style="" />

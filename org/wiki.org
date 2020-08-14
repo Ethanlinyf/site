@@ -24,25 +24,6 @@
 
 你看，这完全就是 Unix 的设计准则。
 
-** Java 中抽象类和接口的区别
- [2020-05-24 Sun 14:36]
-
-- 抽象类要被子类继承，接口要被类实现；
-- 接口只能做方法声明，抽象类中可以作方法声明，也可以做方法实现；
-- 接口里定义的变量只能是公共的静态的常量，抽象类中的变量是普通变量；
-- 接口是设计的结果，抽象类是重构的结果；
-- 抽象类和接口都是用来抽象具体对象的，但是接口抽象级别最高；
-- 抽象类可以有具体的方法和属性，接口只能有抽象方法和不可变常量；
-- 抽象类主要用来抽象类别，接口主要用来抽象功能。
-
-#+BEGIN_QUOTE
-比较抽象类和接口，按照其用途和结构逐个对比就好。
-
-抽象类，用来让子类继承，它可以有具体的方法和属性，但主要还是抽象方法。一个抽象类是可以不包含抽象方法的，但如果一个抽象类不包含抽象方法，那定义一个抽象类是用来寻开心的吗 -_||
-
-接口呢？一般来说，只包含方法声明，而且方法默认是 =public abstract= （公共抽象）的；如果非要包含变量，也只能是 =public static final= （公共静态常量）。
-#+END_QUOTE
-
 ** 文件的描述符和重定向
  [2020-05-12 Tue 18:36]
 
@@ -199,17 +180,6 @@ Web 浏览器有计算有效宽度时会考虑浏览器窗口的打开宽度，�
 - =apply= 的所有参数都必须放在一个数组里传进去；
 - =bind= 除了返回函数以外，参数和 =call= 一样。
 
-** JavaScript 的 event 对象中 target 和 currentTarget 属性的区别
- [2020-04-18 Sat 18:33]
-
-本质区别是：
-- =event.target= 返回触发事件的元素；
-- =event.currentTarget= 返回绑定事件的元素。
-
-=event.currentTarget= 的作用是什么呢？可以理解为和 =this= 的作用差不多，始终返回的是绑定事件的元素。 =target= 的妙用在于 target 事件委托，常见于列表点击事件。
-
-具体示例请参考： [[https://www.cnblogs.com/yewenxiang/p/6171411.html][event对象中 target和currentTarget 属性的区别]]
-
 ** JavaScript 对 url 的编码和解码
  [2020-04-18 Sat 18:26]
 
@@ -289,50 +259,6 @@ _#. Array includes()_
 | searchElement | 必须，需要查找的元素                                                                                                 |
 | fromIndex     | 可选，默认为 0 。从该索引出开始查找 searchElement 。如果为负值，则按升序从 array.length + fromIndex 的索引处开始搜索 |
 
-** npm 安装是 --save 和 --save-dev 的区别[fn:1]
- [2020-03-09 Mon 10:42]
-
-#+BEGIN_QUOTE
-在生产环境中需要使用到的包安装时添加 =--save= ，只在开发环境中用到的包安装时添加 =--save-dev= 。
-#+END_QUOTE
-
-以 npm 安装 vue 为例。
-
-_1. npm install vue_
-
-- 会把 vue 包安装到 =node_modules= 目录中；
-- 不会修改 =package.json= 文件；
-- 之后运行 =npm install= 命令时，不会自动安装 vue 。
-
-_2. npm install vue --save_
-
-- 会把 vue 包安装到 =node_modules= 目录中；
-- 会在 =package.json= 文件中的 =dependencies= 属性下添加 vue ；
-- 之后运行 =npm install= 命令时，会自动安装 vue 包到 =node_modules= 目录中；
-- 之后运行 =npm install --production= 或者注明 =NODE_DEV= 变量值为 =production= 时，不会自动安装 vue 到 =node_modules= 目录中。
-
-_3. npm install vue --save-dev_
-
-- 会把 vue 包安装到 =node_modules= 目录中；
-- 会在 =package.json= 文件中的 =devDependencies= 属性下添加 vue ；
-- 之后运行 =npm install= 命令时，会自动安装 vue 包安装到 =node_modules= 目录中；
-- 之后运行 =npm install --production= 或者注明 =NODE_DEV= 变量值为 =production= 时，不会自动安装 vue 包安装到 =node_modules= 目录中。
-
-_4. npm install vue --global_
-
-- 会把 vue 包安装到全局环境中而不是当前项目的 =node_modules= 目录中（其实是全局环境中的 =node_modules= 啦）；
-- 不会修改 =package.json= 文件；
-- 之后运行 =npm install= 命令时，不会自动安装 vue 。
-
-** Axios 为什么需要实例
- [2020-03-09 Mon 10:18]
-
-默认会导出实例 =axios= ，通常只需使用这个 =axios= 就可以了。
-
-但有时你可能需要创建多个实例，比如你需要访问多个服务地址，而这些服务请求和响应的结构都完全不同，那么，你就可以通过 =axios.create= 创建不同的实例来处理。
-
-比如 =axios1= 是用 =http= 状态码确定响应是否正常，而 =axios2= 是服务器自己定义的状态码，又或者它们请求头不同，支持的 =Content-Type= 不同，那么可以单独为 =axios1= 和 =axios2= 写拦截器。
-
 ** Emacs 宏操作
  [2020-02-28 Fri 12:02]
  https://www.jianshu.com/p/6ad946eb8ebc
@@ -383,90 +309,6 @@ _4. npm install vue --global_
 如此，便设置好了。
 
 加入我们使用在终端中使用 Emacs ，执行 =M-x list-colors-display= ，便可以看到 256 色已经全部激活，如此，终端下使用 Emacs 和 Emacs GUI 的颜色便相差无几了。
-
-** JavaScript JSON.stringify()
- [2020-02-27 Thu 09:02]
-
-=JSON.stringify()= 方法用于将 JavaScript 值转换为 JSON 字符串。语法如下：
-
-#+BEGIN_EXAMPLE
-  JSON.stringify(value[, replacer[, space]])
-#+END_EXAMPLE
-
-_参数说明：_
-
-- =value= ，必需，要转换的 JavaScript 值（通常为对象或数组）；
-- =replacer= ，可选，用于转换结果的函数或数组；
-- =space= ，可选，文本添加缩进、空格和换行符。
-
-其中，对于 =replacer= ，如果它为 _函数_ ，则 JSON.stringify 将调用该函数，并传入每个成员的键和值。使用返回值而不是原始值。如果此函数返回 =undefined= ，则派出成员。根对象的键是一个空字符串： =""= 。如果 =replacer= 是一个 _数组_ ，则仅转换该数组中具有键值的成员，成员的转换顺序与键在数组中的顺序一样。
-
-其中，对于 =space= ，如果它是一个 _数字_ ，则返回值文本在每个级别缩进指定数组的空格，如果 =space= 大于 10 ，则文本缩进 10 个空格。 =space= 也可以使用 _非数字_ ，如 =\t= 。
-
-#+BEGIN_SRC js -n
-  var str = {"name":"菜鸟教程", "site":"http://www.runoob.com"}
-
-  // 只有一个参数的情况
-  str_pretty1 = JSON.stringify(str)
-  // → {"name":"菜鸟教程","site":"http://www.runoob.com"}
-
-  // 使用参数情况
-  str_pretty2 = JSON.stringify(str, null, 4)
-  // →
-  // {
-  //     "name": "菜鸟教程",
-  //     "site": "http://www.runoob.com"
-  // }
-
-#+END_SRC
-
-** Java 中的接口方法为什么必须是 public
- [2020-02-05 Wed 22:35]
-
-子类重写父类方法时，方法的访问权限不能小于原访问权限。接口是一种约束和规范，是一种 _更加抽象的抽象类_ ，在接口中，方法的默认权限就是 =public= ，所以子类重写后只能是 =public= 。
-
-接口中没有变量（既然是约束和规范，怎么能够定义一个大家都可以改的东西呢），只能是常量，默认修饰符为 =public static final= 。
-- 接口必须要具体类实现才有意义，所以必须是 =public= ；
-- 接口中的属性对所有实现类只有一份，所以是 =static= ；
-- 要使实现类向上转型成功，所以必须使 =final= 的。
-
-** Tagging
- [2020-01-28 Tue 14:01]
-
-| Command                                       | Description                         |
-|-----------------------------------------------+-------------------------------------|
-| =git tag=                                     | Listing your tags                   |
-| =git tag -l "v1.8.5"=                         | Listing the 1.8.5 series            |
-| =git show v1.2=                               | Show you've tagged the commit       |
-|-----------------------------------------------+-------------------------------------|
-| =git tag -a v1.4 -m "my version 1.4"=         | Annotated tags                      |
-| =git tag -a v1.2 9fceb02=                     | Tagging later                       |
-| =git tag -a v1.2 9fceb02 -m "my version 1.2"= | Tagging later and Annotated it      |
-|-----------------------------------------------+-------------------------------------|
-| =git push origin v1.5=                        | Sharing Tags                        |
-| =git push origin --tags=                      | Push a lot of tags at once          |
-|-----------------------------------------------+-------------------------------------|
-| =git tag -d v1.4=                             | Deleting tags                       |
-| =git push origin --delete <tagname>=          | Deleting a remote tag               |
-|-----------------------------------------------+-------------------------------------|
-| =git checkout 2.0.0=                          | Checking out tags                   |
-| =git checkout -b version2 v2.0.0=             | Switched to a new branch 'version2' |
-
-** git 比较两次 commit 之间的差异
- [2020-01-28 Tue 14:00]
-
-[[https://blog.csdn.net/u012830148/article/details/77497240][→ 参考链接]]
-
-如何使用 git 比较两次 commit 之间的差异文件呢？可以按下述步骤进行：
-- 通过 =git log= 查看提交历史，获取提交 hash 码，如 hash1、hash2；
-- 通过 =git diff hash1 hash2 --stat= ，查看这两次提交的差异文件，如 test1、test2；
-- 通过 =git diff hash1 hash2 test1= ，查看指定差异文件 test1 具体修改的代码；
-- 通过 =git diff hash1 hash2 test1 > patch_file= ，可以将 test1 的差异部分提取成补丁文件；
-- 通过 =git diff hash1 hash2 test1 test2 > patch_file= ，可以将多个文件的差异生成到同一个补丁文件。
-
-#+BEGIN_QUOTE
-生成补丁后，到相关目录下可以打补丁，如 =pathc -p1 < patch_file= ，其中 =-p1= 是代表忽略当前目录下的几级目录。
-#+END_QUOTE
 
 ** input 中 placeholder、disabled 状态样式修改
  [2020-01-28 Tue 14:00]

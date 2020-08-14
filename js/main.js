@@ -126,11 +126,25 @@ $(document).ready(() => {
         // })
     }
 
+    // Customize annotations
+    $('note').each(function() {
+        $(this).addClass('js-note')
+    })
+
+    // Customize contacts way
+    $('.me .contact #weibo').attr('href', '//weibo.com/u/' + USERCONFIG.weibo)
+    $('.me #wechat img').attr('src', '/images/' + USERCONFIG.wechat)
+    $('.me .contact #email').attr('href', 'mailto:' + USERCONFIG.email)
+    $('.me .contact #github').attr('href', '//github.com/' + USERCONFIG.github)
+    $('.me .contact #bilibili').attr('href', '//space.bilibili.com/' + USERCONFIG.bilibili)
+
     // Customize page footer
-    $('.validation').html('<a href="http://beian.miit.gov.cn" target="_blank">豫ICP备19025929号</a>');   // Update copyright.
+    $('.validation').html('<a href="http://beian.miit.gov.cn" target="_blank">' + USERCONFIG.icp + '</a>');   // Update copyright.
     $('.timestamp-wrapper').parent().addClass('gtd-timestamp')
-    let _udate = $('#postamble .date')[1].innerText.substring(8)
-    $('#postamble .date')[1].innerText = 'Updated: ' + _udate
+    $('#postamble .date')[1].innerText = 'Updated: ' + $('#postamble .date')[1].innerText.substring(8)
+    $('#postamble .author')[0].innerText = 'Author: ' + USERCONFIG.author
+
+    // $('#postamble .date')[0].innerText = 'Created: ' + $('#postamble .date')[0].innerText.substring(5)
 
     // Listen mousewheel event
     // ---------------------------------
@@ -174,8 +188,9 @@ $(document).ready(() => {
 
     if(ISMB) {
         $('#postamble').css('display', 'none')
-        $('body').append('<a class="js-footer-slogan" href="http://beian.miit.gov.cn/" target="_blank">豫ICP备19025929号</a>')
+        $('body').append('<a class="js-footer-slogan" href="http://beian.miit.gov.cn/" target="_blank">' + USERCONFIG.icp +'</a>')
         // $('body').append('<div class="js-footer-slogan">Talk is cheap, show me the code.</div>')
+        $('.me #wechat img').width('40%')
     }
 
     // Show type of code block
@@ -282,6 +297,12 @@ $(document).ready(() => {
 
         $('.org-ul').addClass('js-nav-bookmarks-container')
     }
+
+    // Custom content and postamble margin but home&nav of PC
+//     if (ISPC && (!isCurPage('nav') && !ISHOME)) {
+//         $('#content').css('margin-left', '10%')
+//         $('#postamble').css('margin-left', '10%')
+//     }
 })
 
 // Resolve current theme color

@@ -7,4 +7,5 @@
 
 #+HTML_HEAD: <script src="/js/jquery.min.js"></script>
 #+HTML_HEAD: <script src="/js/darkreader.js"></script>
+#+HTML_HEAD: <script src="/user.config.js"></script>
 #+HTML_HEAD: <script src="/js/main.js"></script>

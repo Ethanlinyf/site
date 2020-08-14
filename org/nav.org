@@ -2,26 +2,27 @@
 #+DATE: <2020-04-10 Fri 20:56>
 #+TITLE: Navigations
 
-| C/N  | A          | B        | C              | D        | E              |
-|------+------------+----------+----------------+----------+----------------|
-| 我的 | [[./index.org][Virgo]]      | [[https://www.bilibili.com/][Bilibili]] | [[https://emacs-china.org/][Emacs China]]    | [[https://github.com/loveminimal][Github]]   | [[https://www.zhihu.com/][知乎]]           |
-|      | [[https://cloud.huawei.com/home#/notepad/task/2f0739e3$ee3c$4049$8422$461c7e46d116/none][华为云]]     | [[https://cloud.tencent.com/developer/labs][腾讯云]]   | [[https://www.youtube.com/][YouTube]]        | [[https://www.icourse163.org/][MOOC]]     | [[https://juejin.im/timeline][掘金]]           |
-|------+------------+----------+----------------+----------+----------------|
-| 工具 | [[http://fanyi.youdao.com/][有道翻译]]   | [[http://www.fhdq.net/][符号大全]] | [[https://www.bejson.com/ui/compress_img/][图压缩]]         | [[https://app.diagrams.net/][Draw]]     | [[https://man.linuxde.net/][Linux 命令大全]] |
-|      | [[http://tool.c7sky.com/webcolor/][Web Color]]  | [[https://pixabay.com/zh/][Pixabay]]  | [[http://www.fonts.net.cn/][字体之家]]       |          |                |
-|------+------------+----------+----------------+----------+----------------|
-| 娱乐 | [[http://www.etymon.cn/index.html][英语字根]]   |          | [[http://www.musictool.top/][音乐聚合]]       | [[https://www.meijutt.tv/][天天美剧]] | [[https://www.gushiwen.org/][古诗文网]]       |
-|------+------------+----------+----------------+----------+----------------|
-| 插件 | [[https://www.crx4chrome.com/][Crx4Chrome]] |          | [[https://vimawesome.com/][VimAwesome]]     | [[http://www.melpa.org/#/][Melpa]]    | [[https://chocolatey.org/packages][Chocolatey]]     |
-|------+------------+----------+----------------+----------+----------------|
-| 教程 | [[http://www.runoob.com/][菜鸟教程]]   | [[http://es6.ruanyifeng.com/][ES6]]      | [[https://www.liaoxuefeng.com/][廖雪峰]]         | [[http://www.softwhy.com/][蚂蚁部落]] | [[https://www.interviewcake.com/data-structures-reference][Interview Cake]] |
-|      | [[http://www.nginx.cn/doc/][Nginx Doc]]  |          |                |          |                |
-|------+------------+----------+----------------+----------+----------------|
-| 博客 | [[https://bitsofco.de/][Bitsofco]]   | [[http://www.ruanyifeng.com/blog/developer/][阮一峰]]   | [[http://www.yinwang.org/][当然我在扯淡]]   | [[http://xahlee.org/][李杀网]]   | [[https://coolshell.cn/][酷壳]]           |
-|      | [[https://geekinney.com/][Geenkinney]] | [[https://www.lijigang.com/][LiJigang]] | [[https://manateelazycat.github.io/index.html][ManateeLazyCat]] |          |                |
+| C/N  | A          | B            | C              | D              | E              |
+|------+------------+--------------+----------------+----------------+----------------|
+| 我的 | [[./index.org][Virgo]]      | [[https://www.bilibili.com/][Bilibili]]     | [[https://emacs-china.org/][Emacs China]]    | [[https://github.com/loveminimal][Github]]         | [[https://www.zhihu.com/][知乎]]           |
+|      | [[https://cloud.huawei.com/home#/notepad/task/2f0739e3$ee3c$4049$8422$461c7e46d116/none][华为云]]     | [[https://cloud.tencent.com/developer/labs][腾讯云]]       | [[https://www.youtube.com/][YouTube]]        | [[https://www.icourse163.org/][MOOC]]           | [[https://juejin.im/timeline][掘金]]           |
+|------+------------+--------------+----------------+----------------+----------------|
+| 工具 | [[http://fanyi.youdao.com/][有道翻译]]   | [[http://www.fhdq.net/][符号大全]]     | [[https://www.bejson.com/ui/compress_img/][图压缩]]         | [[https://man.linuxde.net/][Linux 命令大全]] |                |
+|      | [[http://tool.c7sky.com/webcolor/][Web Color]]  | [[https://pixabay.com/zh/][Pixabay]]      | [[http://www.fonts.net.cn/][字体之家]]       | [[http://tools.jb51.net/][脚本之家]]       | [[https://www.chinaz.com/][站长之家]]       |
+|------+------------+--------------+----------------+----------------+----------------|
+| 娱乐 | [[http://www.etymon.cn/index.html][英语字根]]   | [[https://www.hanjutv.com/][韩剧]]         | [[http://www.musictool.top/][音乐聚合]]       | [[https://www.meijutt.tv/][天天美剧]]       | [[https://www.gushiwen.org/][古诗文网]]       |
+|------+------------+--------------+----------------+----------------+----------------|
+| 插件 | [[https://www.crx4chrome.com/][Crx4Chrome]] |              | [[https://vimawesome.com/][VimAwesome]]     | [[http://www.melpa.org/#/][Melpa]]          | [[https://chocolatey.org/packages][Chocolatey]]     |
+|------+------------+--------------+----------------+----------------+----------------|
+| 教程 | [[http://www.runoob.com/][菜鸟教程]]   | [[http://es6.ruanyifeng.com/][ES6]]          | [[https://www.liaoxuefeng.com/][廖雪峰]]         | [[http://www.softwhy.com/][蚂蚁部落]]       | [[https://www.interviewcake.com/data-structures-reference][Interview Cake]] |
+|      | [[http://www.nginx.cn/doc/][Nginx Doc]]  | [[http://c.biancheng.net/][C 语言中文网]] |                |                |                |
+|------+------------+--------------+----------------+----------------+----------------|
+| 博客 | [[https://bitsofco.de/][Bitsofco]]   | [[http://www.ruanyifeng.com/blog/developer/][阮一峰]]       | [[http://xahlee.org/][李杀网]]         | [[https://coolshell.cn/][酷壳]]           |                |
+|      | [[https://geekinney.com/][Geenkinney]] | [[https://www.lijigang.com/][LiJigang]]     | [[https://manateelazycat.github.io/index.html][ManateeLazyCat]] |                |                |
 
  *Bookmarks InboX*
 
 - 合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。
 - [[https://www.cnblogs.com/kenshinobiy/p/10720151.html][javaScript -- touch事件详解（touchstart、touchmove和touchend）]]
 - [[https://endler.dev/2019/tinysearch/#searchbox]]
+- http://theory.people.com.cn/n/2015/0812/c40531-27449964.html

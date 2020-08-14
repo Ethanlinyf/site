@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-06-14 Sun 15:56 -->
+<!-- 2020-08-05 Wed 19:15 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Org To Site Tutor</title>
@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
 <script src="/js/jquery.min.js"></script>
 <script src="/js/darkreader.js"></script>
+<script src="/user.config.js"></script>
 <script src="/js/main.js"></script>
 </head>
 <body>
@@ -53,6 +54,7 @@
 <ul>
 <li><a href="#org0623567">网站功能图示</a></li>
 <li><a href="#orgc18239e">关于执行脚本</a></li>
+<li><a href="#orge1de0c6">右侧批注样式</a></li>
 </ul>
 </li>
 </ul>
@@ -63,7 +65,7 @@
 </p>
 
 <p>
-<b>如果你是第一次访问这个页面，强烈建议先跳转至附录的 <a href="#org0623567">网站功能图示 ↓</a> 章节，浏览一下站点的功能使用概要 :)</b>
+<b>如果你是第一次访问这个页面，强烈建议先跳转至附录的 <a href="#org0623567">网站功能图示</a> 章节，浏览一下站点的功能使用概要 :)</b>
 </p>
 
 <blockquote>
@@ -80,7 +82,7 @@ Emacs China 中的描述，比较散乱，这里整理一下。我尽量把所�
 </p>
 
 <ul class="org-ul">
-<li class="off"><code>[&#xa0;]</code> 本地全局搜索功能；</li>
+<li class="off"><code>[&#xa0;]</code> 本地全局搜索功能（<a href="http://182.61.145.178:4000/">Hurricane's 实现</a>）；</li>
 <li class="off"><code>[&#xa0;]</code> 添加 RSS 、sitemap 、robots.txt</li>
 </ul>
 
@@ -88,21 +90,31 @@ Emacs China 中的描述，比较散乱，这里整理一下。我尽量把所�
 <span class="underline">2. 过往更新</span>
 </p>
 
+<blockquote>
 <ul class="org-ul">
-<li>新增执行脚本 <code>copy.sh</code> ，用来在 Emacs 外部同步拷贝图片、JS、CSS 等资源文件，避免修改样式后手动拷贝部署（2020-05-29 Fri 21:04）</li>
-<li>新增一个执行脚本 <code>update.sh</code> ，原因详见 <a href="#orgc18239e">关于执行脚本 ↓</a>  (2020-05-26 Tue 16:45)；</li>
+<li>新增批注样式，如右侧所示，使用方法见附录 <a href="#orge1de0c6">右侧批注样式</a>（2020-07-27 Mon 11:01）</li>
+</ul>
+
+<note>
+这就是批注喽，哈哈，可以充分利用右侧的空间。
+</note>
+
+<ul class="org-ul">
+<li>新增 <code>user.config.js</code> ，把一些配置项（微博、GitHub、Author 等），方便使用（2020-07-26 Sun 22:36）</li>
+<li>新增执行脚本 <code>copy.sh</code> ，用来在 Emacs 外部同步拷贝图片、JS、CSS 等资源文件（2020-05-29 Fri 21:04）</li>
+<li>新增一个执行脚本 <code>update.sh</code> ，原因详见 <a href="#orgc18239e">关于执行脚本</a>  (2020-05-26 Tue 16:45)</li>
 <li>双击代码块开始复制，10s 后自动恢复行号（原来的悬浮隐藏有的体验不好）（2020-05-17 Sun 13:04）</li>
 <li>激活毛玻璃风格（总看纯白色，有点腻歪了……）（2020-05-16 Sat 21:05）</li>
 <li>对带行号代码块的处理（复制时隐藏行号，确保复制内容只含代码）（2020-04-17 Fri 15:04）</li>
-<li>添加私人 <a href="./nav.html">导航页 ←</a> ，包括导航和书签 （2020-04-11 Sat 12:11）</li>
-<li><del>激活 Card 风格主题，如你现在所看到的，如果想恢复到原来的风格，只需要注释 <code>~/site/js/main.js</code> 中该行代码 （2020-04-06 Mon 16:52）</del></li>
-<li>调整 <a href="./idea.html">IDEA 页面 ←</a> 样式（2020-04-04 Sat 02:36）</li>
+<li>添加私人 <a href="./nav.html">导航页</a> ，包括导航和书签 （2020-04-11 Sat 12:11）</li>
+<li>调整 <a href="./idea.html">IDEA 页面</a> 样式（2020-04-04 Sat 02:36）</li>
 <li>本地化依赖库，实现点击查看页面全屏尺寸图片（2020-04-03 Fri 21:58）</li>
 <li>显示当前代码块类型（2020-04-02 Thu 15:02）</li>
-<li>添加 <a href="#org0623567">网站功能图示 ↓</a> (2020-03-27 Fri 19:49)</li>
-<li>录制 <a href="#org7e15760">删除当前文章的宏 ↓</a> （2020-03-22 Sun 18:55）</li>
+<li>添加 <a href="#org0623567">网站功能图示</a> (2020-03-27 Fri 19:49)</li>
+<li>录制 <a href="#org7e15760">删除当前文章的宏</a> （2020-03-22 Sun 18:55）</li>
 <li><a href="https://www.bilibili.com/video/av90738660">视频闲聊这个项目</a> （2020-03-04 Wed 22:46）</li>
 </ul>
+</blockquote>
 </div>
 </div>
 
@@ -201,7 +213,7 @@ Emacs 是一个强大的 <span class="underline">“编辑器”</span> ，或�
 </p>
 
 <p>
-这个站点 <a href="https://www.rosecoder.com">Virgo</a> 的生成方式其实很简单，灵感来自于多方面。感谢 <a href="https://github.com/fniessen/org-html-themes">org-html-themes</a> 项目，Virgo 的生成和组织结构都借鉴了该项目。感谢 <a href="https://emacs-china.org/">Emacs China</a> 社区的朋友，它们提供了许多不错的建议和指导。
+这个站点的生成方式其实很简单，灵感来自于多方面。感谢 <a href="https://github.com/fniessen/org-html-themes">org-html-themes</a> 项目，Virgo 的生成和组织结构都借鉴了该项目。感谢 <a href="https://emacs-china.org/">Emacs China</a> 社区的朋友，他们提供了许多不错的建议和指导。
 </p>
 </div>
 </div>
@@ -217,6 +229,10 @@ Emacs 是一个强大的 <span class="underline">“编辑器”</span> ，或�
 site
 |
 |-- org                         # .org 文件
+|   |-- xxx.org
+|
+|-- assets                      # 其它静态文件
+|   |-- doctor.mp3
 |
 |-- css                         # 样式文件，已配置
 |   |-- style.css
@@ -229,6 +245,8 @@ site
 |   |-- main.js
 |
 |-- theme-rose.setup            # 头文件
+|
+|-- xxx.sh                      # 可选的执行脚本，如 copy.sh、update.sh
 |
 |-- public                      # 发布后生成的 .html 文件及静态文件
 |
@@ -248,7 +266,7 @@ site
 </p>
 
 <p>
-在 Emacs 中比较容易跳转，并且同一份 Emacs 配置可以方便地跨平台使用。我在 Windows 上主要使用 <code>git-bash</code> ，直接运行 <code>cd</code> 命令的时候就会跳到这个目录，该目录  <code>C:\Users\jack\AppData\Roaming</code> 被称为漫游家目录。如此，当我切换到 Linux 上使用的时候，就免去了额外的跳转目录思考，在写一些公用脚本的时候也会方便许多。
+在 Windows 下，Emacs 的配置默认生效的目录就是 <code>C:\Users\jack\AppData\Roaming</code> ，该目录被称为漫游家目录。如此，将 site 文件夹也放在这个目录，就会有很多的好处，比如， <code>.emacs.d</code> 和 <code>site</code> 的相对位置是固定的，基于此你可以做一些定制化的便捷性操作（写一些操作脚本等），并且在切换到 Linux 上使用的时候，保持了操作行为的统一。
 </p>
 </div>
 </div>
@@ -294,7 +312,7 @@ site
 <span class="linenr">3: </span>  <span style="color: #66D9EF;">(</span><span style="color: #F92672;">setq</span>
 <span class="linenr">4: </span>   <span style="color: #75715E;">;; </span><span style="color: #75715E;">org-html-doctype "html5"</span>
 <span class="linenr">5: </span>   <span style="color: #75715E;">;; </span><span style="color: #75715E;">org-export-default-language "ch"</span>
-<span class="linenr">6: </span>   user-full-name <span style="color: #E6DB74;">"Jack Liu"</span><span style="color: #66D9EF;">)</span><span style="color: #AE81FF;">)</span>
+<span class="linenr">6: </span>   user-full-name <span style="color: #E6DB74;">"Jack Liu"</span><span style="color: #66D9EF;">)</span><span style="color: #AE81FF;">)</span>          <span style="color: #75715E;">;; </span><span style="color: #75715E;">&#23558; "Jack Liu" &#26356;&#25442;&#25104;&#20320;&#33258;&#24049;&#30340;&#30340;&#21517;&#31216;&#65292;&#32593;&#31449;&#33050;&#27880;&#22788;&#30340; Author &#20540;</span>
 </pre>
 </div>
 </div>
@@ -308,7 +326,7 @@ site
 </p>
 
 <p>
-如 <a href="#org7d6357a">↑ 文件组织方式</a> 所述，把 <code>site</code> 文件夹放在家目录，配置中设置 <code>:base-directory</code> 等时设置目录比较方便。
+如 <a href="#org7d6357a">文件组织方式</a> 所述，把 <code>site</code> 文件夹放在家目录，配置中设置 <code>:base-directory</code> 等时设置目录比较方便。
 </p>
 
 <div class="org-src-container">
@@ -372,10 +390,17 @@ site
 <span class="linenr">58: </span>           <span style="color: #F92672;">:recursive</span> t
 <span class="linenr">59: </span>           <span style="color: #F92672;">:publishing-function</span> org-publish-attachment
 <span class="linenr">60: </span>           <span style="color: #E6DB74;">)</span>
-<span class="linenr">61: </span>
-<span class="linenr">62: </span>          <span style="color: #E6DB74;">(</span><span style="color: #E6DB74;">"website"</span> <span style="color: #F92672;">:components</span> <span style="color: #FD971F;">(</span><span style="color: #E6DB74;">"orgfiles"</span> <span style="color: #E6DB74;">"js"</span> <span style="color: #E6DB74;">"css"</span> <span style="color: #E6DB74;">"images"</span><span style="color: #FD971F;">)</span><span style="color: #E6DB74;">)</span>
-<span class="linenr">63: </span>          <span style="color: #E6DB74;">(</span><span style="color: #E6DB74;">"statics"</span> <span style="color: #F92672;">:components</span> <span style="color: #FD971F;">(</span><span style="color: #E6DB74;">"js"</span> <span style="color: #E6DB74;">"css"</span> <span style="color: #E6DB74;">"images"</span> <span style="color: #E6DB74;">"assets"</span><span style="color: #FD971F;">)</span><span style="color: #E6DB74;">)</span>
-<span class="linenr">64: </span>          <span style="color: #A6E22E;">)</span><span style="color: #66D9EF;">)</span><span style="color: #AE81FF;">)</span>
+<span class="linenr">61: </span>          <span style="color: #E6DB74;">(</span><span style="color: #E6DB74;">"webfonts"</span>
+<span class="linenr">62: </span>           <span style="color: #F92672;">:base-directory</span> <span style="color: #E6DB74;">"~/site/webfonts/"</span>
+<span class="linenr">63: </span>           <span style="color: #F92672;">:base-extension</span> <span style="color: #E6DB74;">"eot</span><span style="color: #AE81FF;">\\</span><span style="color: #E6DB74;">|</span><span style="color: #E6DB74;">svg</span><span style="color: #AE81FF;">\\</span><span style="color: #E6DB74;">|</span><span style="color: #E6DB74;">ttf</span><span style="color: #AE81FF;">\\</span><span style="color: #E6DB74;">|</span><span style="color: #E6DB74;">woff</span><span style="color: #AE81FF;">\\</span><span style="color: #E6DB74;">|</span><span style="color: #E6DB74;">woff2"</span>
+<span class="linenr">64: </span>           <span style="color: #F92672;">:publishing-directory</span> <span style="color: #E6DB74;">"~/site/public/webfonts/"</span>
+<span class="linenr">65: </span>           <span style="color: #F92672;">:recursive</span> t
+<span class="linenr">66: </span>           <span style="color: #F92672;">:publishing-function</span> org-publish-attachment
+<span class="linenr">67: </span>           <span style="color: #E6DB74;">)</span>
+<span class="linenr">68: </span>
+<span class="linenr">69: </span>          <span style="color: #E6DB74;">(</span><span style="color: #E6DB74;">"website"</span> <span style="color: #F92672;">:components</span> <span style="color: #FD971F;">(</span><span style="color: #E6DB74;">"orgfiles"</span> <span style="color: #E6DB74;">"js"</span> <span style="color: #E6DB74;">"css"</span> <span style="color: #E6DB74;">"images"</span> <span style="color: #E6DB74;">"assets"</span> <span style="color: #E6DB74;">"webfonts"</span><span style="color: #FD971F;">)</span><span style="color: #E6DB74;">)</span>
+<span class="linenr">70: </span>          <span style="color: #E6DB74;">(</span><span style="color: #E6DB74;">"statics"</span> <span style="color: #F92672;">:components</span> <span style="color: #FD971F;">(</span><span style="color: #E6DB74;">"js"</span> <span style="color: #E6DB74;">"css"</span> <span style="color: #E6DB74;">"images"</span> <span style="color: #E6DB74;">"assets"</span> <span style="color: #E6DB74;">"webfonts"</span><span style="color: #FD971F;">)</span><span style="color: #E6DB74;">)</span>
+<span class="linenr">71: </span>          <span style="color: #A6E22E;">)</span><span style="color: #66D9EF;">)</span><span style="color: #AE81FF;">)</span>
 </pre>
 </div>
 </div>
@@ -385,7 +410,7 @@ site
 <h3 id="orgf549b43">默认输出设置</h3>
 <div class="outline-text-3" id="text-orgf549b43">
 <p>
-Emacs 默认的 <code>ox-publish</code> 会输出一些默认格式，因为比价原生，我们把它禁止掉，只保留对于代码块的高亮。
+Emacs 默认的 <code>ox-publish</code> 会输出一些默认格式，因为比较原生，我们把它禁止掉，只保留对于代码块的高亮。
 </p>
 
 <div class="org-src-container">
@@ -527,7 +552,7 @@ Emacs 默认的 <code>ox-publish</code> 会输出一些默认格式，因为比�
 </div>
 
 <p>
-注：这个宏依赖于 <a href="#org4bb38e7">delete-org-and-html ↑</a> 这个函数。
+注：这个宏依赖于 <a href="#org4bb38e7">delete-org-and-html</a> 这个函数。
 </p>
 
 <blockquote>
@@ -621,8 +646,8 @@ NOTE: 这个章节只是补充，可以不了解。
 </p>
 <ol class="org-ol">
 <li><code>git clone https://github.com/loveminimal/site.git ~/site</code> ，即把 site 文件夹放在家目录；</li>
-<li>把 <a href="#org699f414">↑ Emacs 中的配置</a> 的配置添加到 Emacs 的配置文件中；</li>
-<li>在 Emacs 中执行封装的 <a href="#orgaf1d3db">↑ 自定义函数</a> 即可。</li>
+<li>把 <a href="#org699f414">Emacs 中的配置</a> 的配置添加到 Emacs 的配置文件中；</li>
+<li>在 Emacs 中执行封装的 <a href="#orgaf1d3db">自定义函数</a> 即可。</li>
 </ol>
 
 <p>
@@ -687,15 +712,7 @@ style="box-shadow: 3px 3px 5px #aaa; float: right;"
 </p>
 
 <p>
-<span class="underline">4. 页面锚点</span>
-</p>
-
-<p>
-文章中带 <code>↑</code> 和 <code>↓</code> 上下两种箭头的链接，表示当前页面内锚点，带 <code>←</code> 左箭头的链接表示站内其它页面的锚点，点击会跳转至相应位置。
-</p>
-
-<p>
-<span class="underline">5. 返回主页和回到顶部</span>
+<span class="underline">4. 返回主页和回到顶部</span>
 </p>
 
 <p>
@@ -703,6 +720,7 @@ style="box-shadow: 3px 3px 5px #aaa; float: right;"
 </p>
 </div>
 </div>
+
 <div id="outline-container-orgc18239e" class="outline-3">
 <h3 id="orgc18239e">关于执行脚本</h3>
 <div class="outline-text-3" id="text-orgc18239e">
@@ -739,7 +757,7 @@ style="box-shadow: 3px 3px 5px #aaa; float: right;"
 <ul class="org-ul">
 <li>执行 <code>git remote -v</code> ，展示当前仓库已经连接的远程库；</li>
 <li>执行 <code>git remote add virgo https://github.com/loveminimal/site.git</code> ，添加该远程库；</li>
-<li>再次执行 <code>git remore -v</code> ，检查是否添加成功。</li>
+<li>再次执行 <code>git remote -v</code> ，检查是否添加成功。</li>
 </ul>
 
 <p>
@@ -765,12 +783,37 @@ style="box-shadow: 3px 3px 5px #aaa; float: right;"
 </p>
 </div>
 </div>
+<div id="outline-container-orge1de0c6" class="outline-3">
+<h3 id="orge1de0c6">右侧批注样式</h3>
+<div class="outline-text-3" id="text-orge1de0c6">
+<p>
+其实，使用很简单，我们把要加的批注写在 <code>&lt;note&gt;...&lt;/note&gt;</code> 中就可以了，放心，在渲染的时候已经做好了处理，如下：
+</p>
+
+<note>
+Tips：诸如此类经常需要插入的片段，可以尝试使用 abbr 或 yasnippets 哦，推荐后者 :)
+</note>
+
+<div class="org-src-container">
+<pre class="src src-html"><span class="linenr">1: </span>#+BEGIN_EXPORT html
+<span class="linenr">2: </span>&lt;<span style="color: #A6E22E;">note</span>&gt;
+<span class="linenr">3: </span>&#36825;&#23601;&#26159;&#25209;&#27880;&#21949;&#65292;&#21704;&#21704;&#65292;&#21487;&#20197;&#20805;&#20998;&#21033;&#29992;&#21491;&#20391;&#30340;&#31354;&#38388;&#12290;
+<span class="linenr">4: </span>&lt;/<span style="color: #A6E22E;">note</span>&gt;
+<span class="linenr">5: </span>#+END_EXPORT
+</pre>
+</div>
+
+<p>
+原理就是，在 Org Mode 中输出 HTML 片段，指定了自定义的标签 <code>&lt;note&gt;</code> （用来后续的 DOM 操作）。在浏览器渲染的过程中，无效的标签符并不会做为普通文本绘制出来，但其内的内容却可以。
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2020-01-01 Wed 14:26</p>
 <p class="author">Author: Jack Liu</p>
-<p class="date">Created: 2020-06-14 Sun 15:56</p>
+<p class="date">Created: 2020-08-05 Wed 19:15</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

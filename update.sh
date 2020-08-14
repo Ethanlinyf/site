@@ -20,6 +20,7 @@ then
     rm -rf "public/css" && cp -r "css" "public/"
     rm -rf "public/images" && cp -r "images" "public/"
     rm -rf "public/js" && cp -r "js" "public/"
+    rm -rf "public/user.config.js" && cp -r "user.config.js" "public/"
     rm -rf "public/webfonts" && cp -r "webfonts" "public/"
 
     echo -e "... ... ...\n"
